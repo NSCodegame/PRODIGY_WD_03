@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-shape-blue"></div>
+    <div class="bg-shape1"></div>
+    <div class="bg-shape2"></div>
+    <div class="bg-shape3"></div>
+    <div class="bg-shape4"></div>
+    <div class="bg-shape5"></div>
+    <div class="bg-shape6"></div>
+    <div class="bg-shape7"></div>
+    <div class="bg-shape8"></div>
+    <div id="main-container">
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen active">
+            <h1 class="title">Tic Tac Toe</h1>
+            <button id="single-player-btn" class="main-btn">Single Player</button>
+            <button id="multi-player-btn" class="main-btn">Multiplayer</button>
+        </div>
+        <!-- Single Player Setup -->
+        <div id="single-setup" class="screen">
+            <h2>Player vs AI</h2>
+            <input type="text" id="single-player-name" placeholder="Enter Player's Name">
+            <div class="difficulty-select">
+                <label>AI Difficulty:</label>
+                <select id="ai-difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <button id="start-single-btn" class="main-btn">Start Game</button>
+            <button id="back-home-1" class="secondary-btn">Back to Home</button>
+        </div>
+        <!-- Multiplayer Setup -->
+        <div id="multi-setup" class="screen">
+            <h2>Multiplayer Game</h2>
+            <input type="text" id="player1-name" placeholder="Player 1 Name">
+            <input type="text" id="player2-name" placeholder="Player 2 Name">
+            <button id="start-multi-btn" class="main-btn">Start Game</button>
+            <button id="back-home-2" class="secondary-btn">Back to Home</button>
+        </div>
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <h2 id="game-mode-title"></h2>
+            <div id="scoreboard">
+                <span id="player-x-label"></span>
+                <span id="player-o-label"></span>
+            </div>
+            <div id="board" class="board"></div>
+            <div id="game-message"></div>
+            <button id="play-again-btn" class="main-btn">Play Again</button>
+            <button id="back-home-3" class="secondary-btn">Back to Home</button>
+            <div id="win-stats">
+                <span id="x-wins">X Wins: 0</span>
+                <span id="o-wins">O Wins: 0</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
